@@ -32,7 +32,8 @@
 
 import React from 'react'
 import User from './User'
-import UseGetAllusers from '../../context/UseGetAllusers' // Correct case in import
+// import UseGetAllusers from '../../context/UseGetAllUsers' // Correct case in import
+import UseGetAllUsers from '../../context/UseGetAllUsers'
 
 function Users() {
     const [allUsers, loading] = UseGetAllusers() // Correct hook name case
