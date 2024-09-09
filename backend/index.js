@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import path from 'path'
 
 import UserRoute from './route/User.route.js';
 import messageRoute from './route/message.route.js';
@@ -35,3 +36,24 @@ mongoose.connect(URI)
 // Route setup
 app.use('/api/user', UserRoute);
 app.use('/api/message', messageRoute);
+
+// code for deployment
+
+// if(process.env.NODE_ENV === 'production') {
+// const dirPath = path.resolve();
+
+// app.use(express.static('./frontend/dist'));
+// app.get("*",{req,res} => {
+//   res.sendFile(path.resolve(dirPath,"./frontend/disy", "index.html"))
+// })
+// }
+
+if (process.env.NODE_ENV === 'production') {
+  const dirPath = path.resolve();
+
+  app.use(express.static('./frontend/dist'));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(dirPath, "./frontend/dist", "index.html"));
+  });
+}
