@@ -8,7 +8,8 @@ import path from 'path'
 
 import UserRoute from './route/User.route.js';
 import messageRoute from './route/message.route.js';
-import { app, server } from './SocketIO/server.js';
+// import { app, server } from './SocketIO/server.js';
+import { app, server } from './SocketIO/Server.js';
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -39,14 +40,7 @@ app.use('/api/message', messageRoute);
 
 // code for deployment
 
-// if(process.env.NODE_ENV === 'production') {
-// const dirPath = path.resolve();
 
-// app.use(express.static('./frontend/dist'));
-// app.get("*",{req,res} => {
-//   res.sendFile(path.resolve(dirPath,"./frontend/disy", "index.html"))
-// })
-// }
 
 if (process.env.NODE_ENV === 'production') {
   const dirPath = path.resolve();
