@@ -36,7 +36,7 @@ import User from './User'
 import UseGetAllUsers from '../../context/UseGetAllUsers'
 
 function Users() {
-    const [allUsers, loading] = UseGetAllusers() // Correct hook name case
+    const [allUsers, loading] = UseGetAllUsers() // Correct hook name case
 
     if (loading) {
         return <div>Loading...</div>

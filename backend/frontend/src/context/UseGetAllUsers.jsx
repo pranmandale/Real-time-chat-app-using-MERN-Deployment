@@ -36,7 +36,7 @@ import React, { useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
 import axios from 'axios'; // Removed the unnecessary "all" import
 
-function UseGetAllusers() {
+function UseGetAllUsers() {
   const [allUsers, setAllUsers] = useState([])
   const [loading, setLoading] = useState(false)
 
@@ -64,4 +64,4 @@ function UseGetAllusers() {
   return [allUsers, loading]
 }
 
-export default UseGetAllusers
+export default UseGetAllUsers
