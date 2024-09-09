@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaSearch } from "react-icons/fa";
-import UseGetAllusers from '../../context/UseGetAllusers';
+import UseGetAllusers from '../../context/UseGetAllUsers';
 import UseConversation from '../../zustand/UseConversation';
 import toast from 'react-hot-toast';
 
@@ -35,14 +35,14 @@ function Search() {
             {/* Apply a consistent background color and text color to the input field */}
             <input 
               type="text" 
-              className="grow outline-none bg-transparent text-gray-700 placeholder-gray-500" 
+              className="text-gray-700 placeholder-gray-500 bg-transparent outline-none grow" 
               placeholder="Search" 
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
           </label>
           <button type="submit">
-            <FaSearch className='text-5xl p-2 hover:bg-gray-400 rounded-full duration-200' />
+            <FaSearch className='p-2 text-5xl duration-200 rounded-full hover:bg-gray-400' />
           </button>
         </div>
       </form>
