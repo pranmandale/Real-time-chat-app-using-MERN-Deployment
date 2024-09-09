@@ -9,7 +9,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // Update to match your frontend origin
+    // origin: "http://localhost:5173", // Update to match your frontend origin
+    origin: "https://real-time-chat-app-using-mern-deployment.onrender.com",
     methods: ["GET", "POST"],
   },
 });
