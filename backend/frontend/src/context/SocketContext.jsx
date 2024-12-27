@@ -1,6 +1,3 @@
-
-
-
 import { createContext, useContext, useEffect, useState } from 'react';
 import { useAuth } from './AuthProvider';
 import io from 'socket.io-client';

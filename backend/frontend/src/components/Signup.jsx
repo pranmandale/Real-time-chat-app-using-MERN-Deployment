@@ -47,6 +47,7 @@ function Signup() {
 
         try {
             // const response = await axios.post('http://localhost:3000/user/signup', UserInfo);
+            // post is used to send data
             const response = await axios.post('/api/user/signup', UserInfo);
             console.log("Response data:", response.data); // Debugging line to check response data
             // alert("Signup successful");

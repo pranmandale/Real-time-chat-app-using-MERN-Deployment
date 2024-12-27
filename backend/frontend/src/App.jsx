@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Left from "./Home/left/Left"
 import Right from "./Home/right/Right"
@@ -29,7 +28,7 @@ function App() {
                   type="checkbox"
                   className="drawer-toggle "
                 />
-                <div className="drawer-content flex h-screen flex-col items-center justify-center">
+                <div className="flex flex-col items-center justify-center h-screen drawer-content">
                   <Right />
                 </div>
                 <div className="drawer-side">
@@ -38,7 +37,7 @@ function App() {
                     aria-label="close sidebar"
                     className="drawer-overlay"
                   ></label>
-                  <ul className="flex h-screen flex-col  w-80 min-h-full bg-gray-300 ">
+                  <ul className="flex flex-col h-screen min-h-full bg-gray-300 w-80 ">
                     <Left />
                   </ul>
                 </div>

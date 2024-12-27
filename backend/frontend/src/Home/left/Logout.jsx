@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { FaSearch } from "react-icons/fa";
+import React, { useState } from 'react';
 import { BiLogOutCircle } from "react-icons/bi";
 import axios from 'axios';
 import Cookies from 'js-cookie'
@@ -23,7 +22,7 @@ function Logout() {
   return (
     <div className='h-[10vh] bg-slate-500 rounded-md'>
        <div>
-       <BiLogOutCircle className='flex justify-center text-6xl hover:bg-slate-400 duration-200 cursor-pointer rounded-full p-2 ml-1 '
+       <BiLogOutCircle className='flex justify-center p-2 ml-1 text-6xl duration-200 rounded-full cursor-pointer hover:bg-slate-400 '
         onClick={handleLogout}
        />
        </div>

@@ -1,11 +1,10 @@
-
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import cookieParser from 'cookie-parser';
 import path from 'path'
-
 import UserRoute from './route/User.route.js';
 import messageRoute from './route/message.route.js';
 // import { app, server } from './SocketIO/server.js';
@@ -14,7 +13,8 @@ import { app, server } from './SocketIO/Server.js';
 dotenv.config(); // Load environment variables from .env file
 
 // Middleware setup
-app.use(cookieParser());
+app.use(cookieParkser());
+
 app.use(cors());
 app.use(express.json());
 
@@ -38,9 +38,9 @@ mongoose.connect(URI)
 app.use('/api/user', UserRoute);
 app.use('/api/message', messageRoute);
 
+
+
 // code for deployment
-
-
 
 if (process.env.NODE_ENV === 'production') {
   const dirPath = path.resolve();

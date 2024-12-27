@@ -1,7 +1,6 @@
-
 import React, { useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
-import axios from 'axios'; // Removed the unnecessary "all" import
+import axios from 'axios'; 
 
 function UseGetAllUsers() {
   const [allUsers, setAllUsers] = useState([])
